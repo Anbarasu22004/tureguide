@@ -62,56 +62,58 @@ class _categoryState extends State<category> {
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child:
-          ListView.builder(
-              itemCount: categories.length,
-              itemBuilder: (context,index){
-                return  Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: 70,
-                    width: 300,
-                    decoration: BoxDecoration(
-                      border: Border.all(),
-                      borderRadius: BorderRadius.circular(10)
+          Container(
+            child: ListView.builder(
+                itemCount: categories.length,
+                itemBuilder: (context,index){
+                  return  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      height: 70,
+                      width: 300,
+                      decoration: BoxDecoration(
+                        border: Border.all(),
+                        borderRadius: BorderRadius.circular(10)
 
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: ListTile(
-                        style: ListTileStyle.list,
-                        leading: Container(
-                            height: 50,
-                            width: 50,
-                            child: Image(image: AssetImage(imagess[index]),fit: BoxFit.contain,)),
-                        title:
-                        Text(categories[index],style: GoogleFonts.lato(fontSize: 18,fontWeight: FontWeight.bold),),
-                        trailing: Icon(Icons.arrow_forward_ios),
-                        onTap: (){
-                          switch (categories[index]) {
-                            case 'Architecture':
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => architecture()));
-                              break;
-                            case 'Land Promoters':
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => architecture()));
-                              break;
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: ListTile(
+                          style: ListTileStyle.list,
+                          leading: Container(
+                              height: 50,
+                              width: 50,
+                              child: Image(image: AssetImage(imagess[index]),fit: BoxFit.contain,)),
+                          title:
+                          Text(categories[index],style: GoogleFonts.lato(fontSize: 18,fontWeight: FontWeight.bold),),
+                          trailing: Icon(Icons.arrow_forward_ios),
+                          onTap: (){
+                            switch (categories[index]) {
+                              case 'Architecture':
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => architecture()));
+                                break;
+                              case 'Land Promoters':
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => architecture()));
+                                break;
 
-                            default:
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(content: Text('Coming Soon...')));
-                          }
+                              default:
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(content: Text('Coming Soon...')));
+                            }
 
-                        },
+                          },
+                        ),
                       ),
                     ),
-                  ),
-                );
-              }),
+                  );
+                }),
+          ),
         ),
       ),
     );

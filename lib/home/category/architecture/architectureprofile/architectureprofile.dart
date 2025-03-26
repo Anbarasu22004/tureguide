@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutterproject/home/category/architecture/architectureprofile/Ourproducts.dart';
+import 'package:flutterproject/home/category/architecture/architectureprofile/Photospage.dart';
 import 'package:flutterproject/home/category/architecture/architectureprofile/servicepage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -11,6 +13,19 @@ class profile1 extends StatefulWidget {
 }
 
 class _profile1State extends State<profile1> {
+
+  List imagess=[
+    'assets/category1.png',
+    'assets/category2.png',
+    'assets/category3.png',
+    'assets/category4.png',
+    'assets/category5.png',
+    'assets/category6.png',
+    'assets/category7.png',
+    'assets/category8.png'
+  ];
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,6 +76,10 @@ class _profile1State extends State<profile1> {
         ],),
         Expanded(child: tapbar()),
 
+
+
+
+        
         
       ],),
 
@@ -82,6 +101,7 @@ class tapbar extends StatelessWidget {
         appBar: AppBar(
 
           bottom: TabBar(
+            labelColor: Colors.purple,
             tabs: [
               Tab(text: "Our Services", ),
               Tab(text: "Our Products", ),
@@ -93,8 +113,8 @@ class tapbar extends StatelessWidget {
         body: TabBarView(
           children: [
             Ourservice(),
-            Center(child: Text("", style: TextStyle(fontSize: 20))),
-            Center(child: Text("", style: TextStyle(fontSize: 20))),
+            Ourproducts(),
+            photos(),
             Center(child: Text("", style: TextStyle(fontSize: 20))),
 
           ],

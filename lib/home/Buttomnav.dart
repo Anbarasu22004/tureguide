@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutterproject/home/Userprofilepage/businessprofile.dart';
+import 'package:flutterproject/home/Features/featurespage.dart';
+import 'package:flutterproject/home/Userprofilepage/profile.dart';
 import 'package:flutterproject/home/category.dart';
 import 'package:flutterproject/home/category/architecture/architecture.dart';
+import 'package:flutterproject/home/homepage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 
@@ -15,9 +19,10 @@ class _botState extends State<bot> {
   int _selectedIndex = 0;
 
   final List<Widget> _screens = [
+    home(),
     category(),
-    category(),
-    architecture()
+    featurespage(),
+    UserProfile()
 
   ];
 
@@ -39,7 +44,7 @@ class _botState extends State<bot> {
         onTap: _onItemTapped,
         items: const [
           BottomNavigationBarItem(
-              icon: Icon(Icons.home), label: "Categories"),
+              icon: Icon(Icons.home), label: "Home"),
           BottomNavigationBarItem(
               icon: Icon(Icons.category), label: "Categories"),
           BottomNavigationBarItem(

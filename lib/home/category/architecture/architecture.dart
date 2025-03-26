@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterproject/home/category.dart';
 import 'package:flutterproject/home/Buttomnav.dart';
 import 'package:flutterproject/home/category/architecture/architectureprofile/architectureprofile.dart';
+import 'package:flutterproject/home/homepage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 
@@ -25,7 +26,7 @@ class _architectureState extends State<architecture> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         leading: IconButton(onPressed: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context)=>bot()));
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>home()));
         }, icon: Icon(Icons.arrow_back)),
         title: Text("Architecture",style: GoogleFonts.lato(fontSize: 22,fontWeight: FontWeight.w400,color: Colors.purple),),
         actions: [
@@ -105,7 +106,8 @@ class filter extends StatelessWidget {
 
     return Scaffold(
 
-      body: Container(
+      body:
+      Container(
         height: 60,
         color: Colors.black12,
         child: Padding(
@@ -165,10 +167,20 @@ class _itemsState extends State<items> {
     'asstes/architecture2.png',
   ];
 
+  List names =[
+    'Ashok',
+    'Ramesh',
+    'Divahar',
+    'Sakthivel',
+    'Anbarasu',
+    'Sathish'
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView.builder(
+      body:
+      ListView.builder(
           itemCount: 6,
           itemBuilder: (context,index){
 
@@ -222,7 +234,7 @@ class _itemsState extends State<items> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('Ashok',style: GoogleFonts.lato(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.purple),),
+                            Text(names[index],style: GoogleFonts.lato(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.purple),),
                             Row(
                               children: [
                                 Icon(Icons.handshake,size: 10,),SizedBox(width: 5,),
@@ -273,7 +285,7 @@ class _itemsState extends State<items> {
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(8),
                                 ),
-                              minimumSize: Size(100, 28),
+                              minimumSize: Size(100, 30),
                             ),
                             ),
                           ),
@@ -285,7 +297,7 @@ class _itemsState extends State<items> {
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(8)
                                 ),
-                              minimumSize: Size(100, 28),
+                              minimumSize: Size(100, 30),
 
                             ),
                             ),
