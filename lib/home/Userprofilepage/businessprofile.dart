@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterproject/home/Userprofilepage/profile.dart';
 
 void main() {
   runApp(Accountpage());
@@ -57,7 +58,7 @@ class BusinessProfilePage extends StatelessWidget {
         title: Text("Business Profile", style: TextStyle(color: Colors.purple)),
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.purple),
-          onPressed: () => Navigator.pop(context),
+          onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context)=>UserProfile())),
         ),
       ),
       body: ListView.separated(

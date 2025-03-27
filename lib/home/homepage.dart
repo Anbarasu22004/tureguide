@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterproject/home/Userprofilepage/personaldetails/verification1.dart';
 import 'package:flutterproject/home/Userprofilepage/profile.dart';
 import 'package:flutterproject/home/category/architecture/architecture.dart';
 
@@ -166,7 +167,9 @@ class HomePage extends StatelessWidget {
                         padding: const EdgeInsets.only(left: 100),
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(backgroundColor: Colors.purple),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>kyc()));
+                          },
                           child: Text("Register Now",style: TextStyle(color: Colors.white),),
                         ),
                       ),

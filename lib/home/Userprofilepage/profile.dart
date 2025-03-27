@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutterproject/home/Userprofilepage/businessprofile.dart';
+import 'package:flutterproject/home/Userprofilepage/category/Dashboard.dart';
+import 'package:flutterproject/home/Userprofilepage/category/Help&support.dart';
+import 'package:flutterproject/home/Userprofilepage/category/Logoutpage.dart';
+import 'package:flutterproject/home/Userprofilepage/category/Messages.dart';
+import 'package:flutterproject/home/Userprofilepage/category/MydigitalCard.dart';
 import 'package:flutterproject/home/Userprofilepage/category/Selectlanguage.dart';
 import 'package:flutterproject/home/Userprofilepage/personaldetails/personaldetails.dart';
 import 'package:flutterproject/home/Userprofilepage/wishlist.dart';
@@ -46,7 +51,8 @@ class _UserProfileState extends State<UserProfile> {
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
               ),
               onPressed: () {
-                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Login_Screen()))
+                ;
 
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(content: Text("Logged out successfully")),
@@ -334,7 +340,8 @@ class _UserProfileState extends State<UserProfile> {
                           onTap: (){
                             switch (titles[index]) {
                               case 'Logout':
-                                _showLogoutDialog(context);
+                                _showLogoutDialog(context) ;
+
                                 break;
                               case 'Language':
                                 Navigator.push(
@@ -353,6 +360,30 @@ class _UserProfileState extends State<UserProfile> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) => Accountpage()));
+                                break;
+                              case 'My Message':
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => MessagesPage()));
+                                break;
+                              case 'Dashboard':
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Dashboard()));
+                                break;
+                              case 'Feedback & Support':
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => HelpPage()));
+                                break;
+                              case 'My Digital Card':
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => DigitalCardPage()));
                                 break;
 
 

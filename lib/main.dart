@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutterproject/home/Userprofilepage/businessprofile.dart';
+import 'package:flutterproject/home/Userprofilepage/category/Dashboard.dart';
+import 'package:flutterproject/home/Userprofilepage/category/Help&support.dart';
+import 'package:flutterproject/home/Userprofilepage/category/Logoutpage.dart';
+import 'package:flutterproject/home/Userprofilepage/category/Messages.dart';
+import 'package:flutterproject/home/Userprofilepage/category/MydigitalCard.dart';
 import 'package:flutterproject/home/Userprofilepage/category/Selectlanguage.dart';
+import 'package:flutterproject/home/Userprofilepage/personaldetails/resultpage.dart';
+import 'package:flutterproject/home/Userprofilepage/personaldetails/verification1.dart';
 import 'package:flutterproject/home/Userprofilepage/personaldetails/personaldetails.dart';
 import 'package:flutterproject/home/Userprofilepage/profile.dart';
 import 'package:flutterproject/home/Userprofilepage/wishlist.dart';
@@ -43,7 +50,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: bot(),
+      home: Dashboard(),
     );
   }
 }
