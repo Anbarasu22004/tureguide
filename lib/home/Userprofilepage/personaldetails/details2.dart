@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutterproject/home/Userprofilepage/businessprofile.dart';
 import 'package:flutterproject/home/Userprofilepage/personaldetails/personaldetails.dart';
+import 'package:flutterproject/home/Userprofilepage/profile.dart';
+
 
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
@@ -32,10 +34,9 @@ class _PersonalDetailScreenState extends State<businessDetailScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back_ios)),
         title: Text("Personal Detail",style: TextStyle(color: Colors.purple),),
-        leading: IconButton(onPressed: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context)=>PersonalDetailScreen()));
-        }, icon: Icon(Icons.arrow_back_ios,color: Colors.purple,)),
+        
         backgroundColor: Colors.white,
         foregroundColor: Colors.black,
       ),

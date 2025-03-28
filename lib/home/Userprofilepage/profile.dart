@@ -9,6 +9,7 @@ import 'package:flutterproject/home/Userprofilepage/category/Selectlanguage.dart
 import 'package:flutterproject/home/Userprofilepage/personaldetails/personaldetails.dart';
 import 'package:flutterproject/home/Userprofilepage/wishlist.dart';
 import 'package:flutterproject/home/category/architecture/architecture.dart';
+import 'package:flutterproject/home/home1.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class UserProfile extends StatefulWidget {
@@ -118,15 +119,15 @@ class _UserProfileState extends State<UserProfile> {
             Stack(
               alignment: Alignment.topCenter,
               children: [
-                // Main background
+
                 Container(
                   height: 310,
 
                 ),
 
-                // Profile header with rounded bottom
+
                 Container(
-                  height: 250, // Increased height for better spacing
+                  height: 250,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
@@ -148,7 +149,7 @@ class _UserProfileState extends State<UserProfile> {
                       Padding(
                         padding: const EdgeInsets.only(bottom: 150),
                         child: IconButton(onPressed: (){
-                          Navigator.pop(context);
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Home_screen()));
                         }, icon: Icon(Icons.close))
                       ),
                     Padding(
@@ -195,9 +196,9 @@ class _UserProfileState extends State<UserProfile> {
                   ],),
                 ),
 
-                // Floating Box (Hello, Welcome!)
+
                 Positioned(
-                  top: 150, // Positioned below the header
+                  top: 150,
                   child: Container(
                     width: 350,
                     height: 150,

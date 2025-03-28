@@ -4,7 +4,7 @@ import 'package:flutterproject/home/Features/featurespage.dart';
 import 'package:flutterproject/home/Userprofilepage/profile.dart';
 import 'package:flutterproject/home/category.dart';
 import 'package:flutterproject/home/category/architecture/architecture.dart';
-import 'package:flutterproject/home/homepage.dart';
+import 'package:flutterproject/home/home1.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 
@@ -19,7 +19,7 @@ class _botState extends State<bot> {
   int _selectedIndex = 0;
 
   final List<Widget> _screens = [
-    home(),
+    Home_screen(),
     category(),
     featurespage(),
     UserProfile()

@@ -197,7 +197,7 @@ class _BusinessDetailScreenState extends State<BusinessDetailScreen1> {
               ),
               SizedBox(height: 10),
 
-              // Email Fields
+
               for (int i = 0; i < emailAddresses.length; i++)
                 Padding(
                   padding: const EdgeInsets.only(bottom: 8.0),

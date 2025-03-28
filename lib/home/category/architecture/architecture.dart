@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterproject/home/category.dart';
 import 'package:flutterproject/home/Buttomnav.dart';
 import 'package:flutterproject/home/category/architecture/architectureprofile/architectureprofile.dart';
-import 'package:flutterproject/home/homepage.dart';
+import 'package:flutterproject/home/home1.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 
@@ -26,7 +26,7 @@ class _architectureState extends State<architecture> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         leading: IconButton(onPressed: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context)=>home()));
+          Navigator.pop(context);
         }, icon: Icon(Icons.arrow_back)),
         title: Text("Architecture",style: GoogleFonts.lato(fontSize: 22,fontWeight: FontWeight.w400,color: Colors.purple),),
         actions: [

@@ -122,7 +122,7 @@ class _KYCVerificationScreenState extends State<kyc2> {
             Text("Privacy: Your personal information will always be handled with the ",style: TextStyle(fontSize:11),),SizedBox(height: 5),
             Text("highest level of privacy and security in compliance with data  ",style: TextStyle(fontSize:11),),
             Text("Protection regulation {such as GDPR or CCPA}  ",style: TextStyle(fontSize:11),),
-            SizedBox(height: 150),
+            SizedBox(height: 100),
             SizedBox(
               height: 60,
               width: 400,

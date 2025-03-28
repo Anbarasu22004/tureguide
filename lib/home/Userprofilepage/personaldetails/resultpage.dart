@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
+import 'package:flutterproject/home/home1.dart';
 
-import 'package:flutterproject/home/homepage.dart';
+
+
 
 class RegistrationSuccessPage extends StatefulWidget {
   @override
@@ -117,7 +118,7 @@ class _RegistrationSuccessPageState extends State<RegistrationSuccessPage>
                   onPressed: () {
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (context) => HomePage()),
+                      MaterialPageRoute(builder: (context) => Home_screen()),
                     );
                   },
                   style: ElevatedButton.styleFrom(

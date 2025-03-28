@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterproject/home/Userprofilepage/personaldetails/details4.dart';
 import 'package:flutterproject/home/Userprofilepage/personaldetails/verification2.dart';
-import 'package:flutterproject/home/homepage.dart';
+import 'package:flutterproject/home/home1.dart';
 
 
 void main() {
@@ -34,7 +34,7 @@ class _KYCVerificationScreenState extends State<KYCVerificationScreen> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>home()));
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>Home_screen()));
           },
         ),
       ),

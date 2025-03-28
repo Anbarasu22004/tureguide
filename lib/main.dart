@@ -5,7 +5,9 @@ import 'package:flutterproject/home/Userprofilepage/category/Help&support.dart';
 import 'package:flutterproject/home/Userprofilepage/category/Logoutpage.dart';
 import 'package:flutterproject/home/Userprofilepage/category/Messages.dart';
 import 'package:flutterproject/home/Userprofilepage/category/MydigitalCard.dart';
+import 'package:flutterproject/home/Userprofilepage/category/Posterpage.dart';
 import 'package:flutterproject/home/Userprofilepage/category/Selectlanguage.dart';
+import 'package:flutterproject/home/Userprofilepage/personaldetails/details2.dart';
 import 'package:flutterproject/home/Userprofilepage/personaldetails/resultpage.dart';
 import 'package:flutterproject/home/Userprofilepage/personaldetails/verification1.dart';
 import 'package:flutterproject/home/Userprofilepage/personaldetails/personaldetails.dart';
@@ -14,9 +16,11 @@ import 'package:flutterproject/home/Userprofilepage/wishlist.dart';
 import 'package:flutterproject/home/category.dart';
 import 'package:flutterproject/home/category/architecture/architecture.dart';
 import 'package:flutterproject/home/Buttomnav.dart';
+import 'package:flutterproject/home/category/architecture/architectureprofile/Ourproducts.dart';
 import 'package:flutterproject/home/category/architecture/architectureprofile/architectureprofile.dart';
+import 'package:flutterproject/home/category/architecture/architectureprofile/products/productpage1.dart';
 import 'package:flutterproject/home/category/architecture/architectureprofile/servicepage.dart';
-import 'package:flutterproject/home/homepage.dart';
+import 'package:flutterproject/home/home1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -50,7 +54,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Dashboard(),
+      home: Special_day(),
     );
   }
 }

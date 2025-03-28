@@ -14,16 +14,7 @@ class profile1 extends StatefulWidget {
 
 class _profile1State extends State<profile1> {
 
-  List imagess=[
-    'assets/category1.png',
-    'assets/category2.png',
-    'assets/category3.png',
-    'assets/category4.png',
-    'assets/category5.png',
-    'assets/category6.png',
-    'assets/category7.png',
-    'assets/category8.png'
-  ];
+
 
 
   @override
@@ -99,6 +90,10 @@ class tapbar extends StatelessWidget {
       length: 4,
       child: Scaffold(
         appBar: AppBar(
+          leading:SizedBox() ,
+
+
+
 
           bottom: TabBar(
             labelColor: Colors.purple,
