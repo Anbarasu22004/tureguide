@@ -55,7 +55,7 @@ class _LanguageSectionState extends State<LanguageSection> {
         child: Column(
           children: [
             SizedBox(height: 20),
-            Image.asset('assets/architecture1.png', height: 150),
+            Image.asset('assets/language.png', height: 150),
             SizedBox(height: 15),
             Text(
               "Select Language",
@@ -108,6 +108,28 @@ class _LanguageSectionState extends State<LanguageSection> {
                 },
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.purple,
+                  foregroundColor: Colors.white,
+                  minimumSize: Size(400, 50),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+                child: Text(
+                  "Select",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+              ),
+            )
+
+
           ],
         ),
       ),

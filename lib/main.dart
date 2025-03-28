@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterproject/home/SearchBar.dart';
 import 'package:flutterproject/home/Userprofilepage/businessprofile.dart';
 import 'package:flutterproject/home/Userprofilepage/category/Dashboard.dart';
 import 'package:flutterproject/home/Userprofilepage/category/Help&support.dart';
@@ -20,7 +21,7 @@ import 'package:flutterproject/home/category/architecture/architectureprofile/Ou
 import 'package:flutterproject/home/category/architecture/architectureprofile/architectureprofile.dart';
 import 'package:flutterproject/home/category/architecture/architectureprofile/products/productpage1.dart';
 import 'package:flutterproject/home/category/architecture/architectureprofile/servicepage.dart';
-import 'package:flutterproject/home/home1.dart';
+import 'package:flutterproject/home/HomePage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -54,7 +55,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Special_day(),
+      home: SearchPage(),
     );
   }
 }

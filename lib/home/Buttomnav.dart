@@ -4,7 +4,7 @@ import 'package:flutterproject/home/Features/featurespage.dart';
 import 'package:flutterproject/home/Userprofilepage/profile.dart';
 import 'package:flutterproject/home/category.dart';
 import 'package:flutterproject/home/category/architecture/architecture.dart';
-import 'package:flutterproject/home/home1.dart';
+import 'package:flutterproject/home/HomePage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 

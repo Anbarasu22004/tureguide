@@ -86,7 +86,14 @@ class _Home_screenState extends State<Home_screen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Hello... Smart Global",style: GoogleFonts.lato(fontSize: 16,color: Color(0xff742B88)),),
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text("Hello... ",style: GoogleFonts.lato(fontSize: 20,color: Color(0xff742B88),fontWeight: FontWeight.bold),),
+            Text("Smart Global",style: GoogleFonts.lato(fontSize: 20,color: Color(0xff742B88),fontWeight: FontWeight.bold),),
+
+          ],
+        ),
         actions: [
           IconButton(onPressed: (){}, icon: Icon(Icons.location_on_outlined,color:Color(0xff742B88))),
           IconButton(onPressed: (){}, icon: Icon(Icons.notifications_none,color:Color(0xff742B88)))
@@ -111,20 +118,49 @@ class _Home_screenState extends State<Home_screen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(height: 40,width: 350,
-                  child: TextFormField(
-                    decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.search,color:Color(0xff742B88) ,),
-                      hintText: "Search",
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(16),
-                          borderSide: BorderSide(color: Color(0xff742B88)
-                          )
+              SizedBox(height: 10,),
+
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+
+                  Container(
+                    height: 50,
+                    width: 240,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: Colors.purple
+                      ),
+                      borderRadius: BorderRadius.only(topLeft: Radius.circular(20),bottomLeft: Radius.circular(20)),
+
+                    ),
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: 'Search here',
+
+                        prefixIcon: Icon(Icons.search)
                       ),
                     ),
+                  ),
+                  Container(
+                    height: 50,
+                    width: 100,
+                    child: Center(child: Text('Search',style: TextStyle(fontSize: 15,color: Colors.white,fontWeight: FontWeight.bold),)),
+                    decoration: BoxDecoration(
+                      color: Colors.purple,
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(20),
+                        bottomRight: Radius.circular(20)
+                      )
+                    ),
+
                   )
+                ],
               ),
-              SizedBox(height: 10),
+
+              SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.only(right:230),
                 child: Text("Top Categories",style: GoogleFonts.lato(fontSize: 16,color: Colors.black,fontWeight: FontWeight.bold)),

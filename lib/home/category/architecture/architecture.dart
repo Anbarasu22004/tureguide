@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterproject/home/category.dart';
 import 'package:flutterproject/home/Buttomnav.dart';
 import 'package:flutterproject/home/category/architecture/architectureprofile/architectureprofile.dart';
-import 'package:flutterproject/home/home1.dart';
+import 'package:flutterproject/home/HomePage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 

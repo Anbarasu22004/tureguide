@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutterproject/home/Userprofilepage/Addaccount.dart';
 import 'package:flutterproject/home/Userprofilepage/businessprofile.dart';
 import 'package:flutterproject/home/Userprofilepage/category/Dashboard.dart';
 import 'package:flutterproject/home/Userprofilepage/category/Help&support.dart';
 import 'package:flutterproject/home/Userprofilepage/category/Logoutpage.dart';
 import 'package:flutterproject/home/Userprofilepage/category/Messages.dart';
 import 'package:flutterproject/home/Userprofilepage/category/MydigitalCard.dart';
+import 'package:flutterproject/home/Userprofilepage/category/Posterpage.dart';
 import 'package:flutterproject/home/Userprofilepage/category/Selectlanguage.dart';
 import 'package:flutterproject/home/Userprofilepage/personaldetails/personaldetails.dart';
 import 'package:flutterproject/home/Userprofilepage/wishlist.dart';
 import 'package:flutterproject/home/category/architecture/architecture.dart';
-import 'package:flutterproject/home/home1.dart';
+import 'package:flutterproject/home/HomePage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class UserProfile extends StatefulWidget {
@@ -286,28 +288,33 @@ class _UserProfileState extends State<UserProfile> {
                               ),
                             ),
                           ),
-                          Container(
-                            height: 80,
-                            width: 80,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                Icon(Icons.gif_box),
-                                Container(
-                                    height: 10,
-                                    color: Colors.white,
-                                    child: Center(child: Text("Add Product",style: TextStyle(fontSize: 10),)))
-                              ],),
-                            decoration: BoxDecoration(
-                                gradient: LinearGradient(
-                                  begin: Alignment.topCenter,
-                                  end: Alignment.bottomCenter,
-                                  colors: [
-                                    Colors.orange.shade200,
-                                    Colors.white,
-                                  ],
-                                ),
-                                borderRadius: BorderRadius.circular(10)
+                          GestureDetector(
+                            onTap: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>AddProductScreen()));
+                            },
+                            child: Container(
+                              height: 80,
+                              width: 80,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                children: [
+                                  Icon(Icons.gif_box),
+                                  Container(
+                                      height: 10,
+                                      color: Colors.white,
+                                      child: Center(child: Text("Add Product",style: TextStyle(fontSize: 10),)))
+                                ],),
+                              decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                    begin: Alignment.topCenter,
+                                    end: Alignment.bottomCenter,
+                                    colors: [
+                                      Colors.orange.shade200,
+                                      Colors.white,
+                                    ],
+                                  ),
+                                  borderRadius: BorderRadius.circular(10)
+                              ),
                             ),
                           ),
 
@@ -372,7 +379,7 @@ class _UserProfileState extends State<UserProfile> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => Dashboard()));
+                                        builder: (context) => dashboard()));
                                 break;
                               case 'Feedback & Support':
                                 Navigator.push(
@@ -385,6 +392,12 @@ class _UserProfileState extends State<UserProfile> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) => DigitalCardPage()));
+                                break;
+                              case 'Special Day Poster':
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Special_day()));
                                 break;
 
 

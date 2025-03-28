@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterproject/home/Userprofilepage/personaldetails/details4.dart';
 import 'package:flutterproject/home/Userprofilepage/personaldetails/verification2.dart';
-import 'package:flutterproject/home/home1.dart';
+import 'package:flutterproject/home/HomePage.dart';
 
 
 void main() {
