@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutterproject/home/SearchBar.dart';
+import 'package:flutterproject/home/Userprofilepage/LocationPage.dart';
 import 'package:flutterproject/home/Userprofilepage/personaldetails/verification1.dart';
 import 'package:flutterproject/home/Userprofilepage/profile.dart';
 import 'package:flutterproject/home/category/architecture/architecture.dart';
@@ -95,7 +97,9 @@ class _Home_screenState extends State<Home_screen> {
           ],
         ),
         actions: [
-          IconButton(onPressed: (){}, icon: Icon(Icons.location_on_outlined,color:Color(0xff742B88))),
+          IconButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>LocationPage()));
+          }, icon: Icon(Icons.location_on_outlined,color:Color(0xff742B88))),
           IconButton(onPressed: (){}, icon: Icon(Icons.notifications_none,color:Color(0xff742B88)))
         ],
 
@@ -130,12 +134,15 @@ class _Home_screenState extends State<Home_screen> {
                     width: 240,
                     decoration: BoxDecoration(
                       border: Border.all(
-                        color: Colors.purple
+                        color: Colors.purple.shade800
                       ),
                       borderRadius: BorderRadius.only(topLeft: Radius.circular(20),bottomLeft: Radius.circular(20)),
 
                     ),
                     child: TextFormField(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>SearchPage()));
+                      },
                       decoration: InputDecoration(
                         border: InputBorder.none,
                         hintText: 'Search here',
@@ -149,7 +156,7 @@ class _Home_screenState extends State<Home_screen> {
                     width: 100,
                     child: Center(child: Text('Search',style: TextStyle(fontSize: 15,color: Colors.white,fontWeight: FontWeight.bold),)),
                     decoration: BoxDecoration(
-                      color: Colors.purple,
+                      color: Colors.purple.shade800,
                       borderRadius: BorderRadius.only(
                         topRight: Radius.circular(20),
                         bottomRight: Radius.circular(20)

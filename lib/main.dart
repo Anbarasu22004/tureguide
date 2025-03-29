@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterproject/home/SearchBar.dart';
+import 'package:flutterproject/home/Userprofilepage/LocationPage.dart';
 import 'package:flutterproject/home/Userprofilepage/businessprofile.dart';
 import 'package:flutterproject/home/Userprofilepage/category/Dashboard.dart';
 import 'package:flutterproject/home/Userprofilepage/category/Help&support.dart';
@@ -55,7 +56,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: SearchPage(),
+      home: Login_Screen(),
     );
   }
 }

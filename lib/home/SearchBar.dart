@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutterproject/home/Userprofilepage/LocationPage.dart';
+import 'package:flutterproject/home/category/architecture/architecture.dart';
 
 void main() {
   runApp(MyApp());
@@ -57,8 +59,15 @@ class _SearchPageState extends State<SearchPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          IconButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>LocationPage()));
+          }, icon: Icon(Icons.location_on))
+        ],
         
-        leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back,color: Colors.purple,)),
+        leading: IconButton(onPressed: (){
+          Navigator.pop(context);
+        }, icon: Icon(Icons.arrow_back,color: Colors.purple,)),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -74,9 +83,9 @@ class _SearchPageState extends State<SearchPage> {
                   width: 240,
                   decoration: BoxDecoration(
                     border: Border.all(
-                        color: Colors.purple
+                        color: Colors.purple.shade800
                     ),
-                    borderRadius: BorderRadius.only(topLeft: Radius.circular(20),bottomLeft: Radius.circular(20)),
+                    borderRadius: BorderRadius.circular(20),
 
                   ),
                   child: TextFormField(
@@ -89,18 +98,20 @@ class _SearchPageState extends State<SearchPage> {
                     ),
                   ),
                 ),
-                Container(
-                  height: 50,
-                  width: 100,
-                  child: Center(child: Text('Search',style: TextStyle(fontSize: 15,color: Colors.white,fontWeight: FontWeight.bold),)),
-                  decoration: BoxDecoration(
-                      color: Colors.purple,
-                      borderRadius: BorderRadius.only(
-                          topRight: Radius.circular(20),
-                          bottomRight: Radius.circular(20)
-                      )
-                  ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 5),
+                  child: Container(
+                    height: 50,
+                    width: 100,
+                    child: Center(child: Text('Search',style: TextStyle(fontSize: 15,color: Colors.white,fontWeight: FontWeight.bold),)),
+                    decoration: BoxDecoration(
+                        color: Colors.purple.shade800,
+                        borderRadius: BorderRadius.circular(
+                            20
+                        )
+                    ),
 
+                  ),
                 )
               ],
             ),
@@ -113,41 +124,91 @@ class _SearchPageState extends State<SearchPage> {
                 itemBuilder: (context, index) {
                   return ListTile(
                     title: Text(filteredItems[index]),
-                  );
+                    onTap: (){
+                      switch (categories[index]) {
+                        case 'Architecture':
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => architecture()));
+                          break;
+                        case 'Land Promoters':
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => architecture()));
+                          break;
+
+                        default:
+                          ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(content: Text('Coming Soon...')));
+                      }
+                    },
+                  )
+                  ;
+
                 },
               ),
             )
                 : Container(), 
-            Text("Recent Search",style: TextStyle(fontSize: 20),),
+            Padding(
+              padding: const EdgeInsets.only(right: 240),
+              child: Text("Recent Search",style: TextStyle(fontSize: 20),),
+            ),
 
-            Expanded(
-              child: GridView.builder(
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 4,
-                  crossAxisSpacing: 10,
-                  mainAxisSpacing: 10,
-                ),
-                itemCount: categories.length,
-                itemBuilder: (context, index) {
-                  return
-                    ElevatedButton(
-                      onPressed: () {
 
-                      },
-                      style: ElevatedButton.styleFrom(
+            Container(
+              height: 70,
+              child: Expanded(
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: categories.length,
+                  shrinkWrap: true,
+                  itemBuilder: (context, index) {
+                    return
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: ElevatedButton(
+                          onPressed: () {
+                            switch (categories[index]) {
+                              case 'Architecture':
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => architecture()));
+                                break;
+                              case 'Land Promoters':
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => architecture()));
+                                break;
 
-                        backgroundColor: Colors.deepOrange.shade100,
-                        foregroundColor: Colors.black,
-                        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
+                              default:
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(content: Text('Coming Soon...')));
+                            }
+                          },
+                          style: ElevatedButton.styleFrom(
+                            maximumSize: Size(200, 50),
+                            backgroundColor: Colors.deepOrange.shade100,
+                            foregroundColor: Colors.black,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                          ),
+                          child: Text(categories[index]),
                         ),
-                      ),
-                      child: Text(categories[index]),
-                    );
-                },
+                      );
+                      ;
+
+                  },
+                ),
               ),
             ),
+
+
+
 
           ],
         ),
