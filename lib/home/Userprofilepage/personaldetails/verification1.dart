@@ -47,7 +47,7 @@ class _KYCVerificationScreenState extends State<KYCVerificationScreen> {
             Center(
               child: Container(
                 child: Image.asset(
-                  "assets/kyc.jpeg", // Add your image in assets folder
+                  "assets/kyc.png",
                 ),
               ),
             ),
@@ -147,7 +147,7 @@ class _KYCVerificationScreenState extends State<KYCVerificationScreen> {
             ),
             SizedBox(height: 30),
 
-            // Terms & Conditions
+
             Center(
               child: Text(
                 "Read KYC Terms & Conditions",
@@ -156,7 +156,7 @@ class _KYCVerificationScreenState extends State<KYCVerificationScreen> {
             ),
             SizedBox(height: 130),
 
-            // Get Verified Button
+
             Center(
               child: SizedBox(
                 width: 330,

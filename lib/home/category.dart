@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterproject/home/Buttomnav.dart';
 import 'package:flutterproject/home/category/architecture/architecture.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -39,7 +40,9 @@ class _categoryState extends State<category> {
     return Scaffold(
       appBar:
       AppBar(
-        leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back,color: Colors.purple,)),
+        leading: IconButton(onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>bot()));
+        }, icon: Icon(Icons.arrow_back,color: Colors.purple,)),
         title: Text("Categories",style: GoogleFonts.lato(fontSize: 22,fontWeight: FontWeight.w400,color: Colors.purple),),
         actions: [
           Padding(

@@ -40,7 +40,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   Future<void> _navigateToHome() async {
-    await Future.delayed(const Duration(seconds: 5)); // Splash screen duration
+    await Future.delayed(const Duration(seconds: 5));
     if (mounted) {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (context) => const Login_Screen()),
@@ -133,10 +133,7 @@ class _Login_ScreenState extends State<Login_Screen> {
                       )
                   ),
                   onPressed: (){
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) =>  bot()),
-                    );
+                    Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=> bot()), (route) => false);
                   }, child: Text("LOGIN",style: GoogleFonts.lato(textStyle: TextStyle(fontSize: 15,fontWeight: FontWeight.bold,color: Colors.white)),))),
           SizedBox(height:20),
           Row(

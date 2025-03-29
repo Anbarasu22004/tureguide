@@ -1,0 +1,1 @@
+C:\Users\Smart Global Solutio\StudioProjects\flutterproject\build\app\intermediates\cxx\RelWithDebInfo\b2t1c411\obj\arm64-v8a

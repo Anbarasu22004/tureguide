@@ -5,6 +5,7 @@ import 'package:flutterproject/home/Userprofilepage/personaldetails/verification
 import 'package:flutterproject/home/Userprofilepage/profile.dart';
 import 'package:flutterproject/home/category/architecture/architecture.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'dart:async';
 
 class Home_screen extends StatefulWidget {
   const Home_screen({super.key});
@@ -83,11 +84,43 @@ class _Home_screenState extends State<Home_screen> {
     'assets/house.png',
     'assets/house.png',
   ];
+  List<String> hintTexts = [
+    "Search here...",
+    'Architecture...',
+    'Land Promoters...',
+    'Engineers...',
+    'Real Estate Consultant..',
+    'Builder...',
+    'Contractors...',
+    'Registration Services...',
+    'Bank Loans... '
+  ];
+  int hintIndex = 0;
+   Timer? _timer;
+
+  @override
+  void initState() {
+    super.initState();
+
+
+    _timer = Timer.periodic(Duration(seconds: 3), (timer) {
+      setState(() {
+        hintIndex = (hintIndex + 1) % hintTexts.length;
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -140,14 +173,24 @@ class _Home_screenState extends State<Home_screen> {
 
                     ),
                     child: TextFormField(
+                      textAlign: TextAlign.start,
                       onTap: (){
                         Navigator.push(context, MaterialPageRoute(builder: (context)=>SearchPage()));
                       },
                       decoration: InputDecoration(
                         border: InputBorder.none,
-                        hintText: 'Search here',
+                        hintText: hintTexts[hintIndex],
+                        hintStyle: TextStyle(
 
-                        prefixIcon: Icon(Icons.search)
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          fontStyle: FontStyle.italic,
+                          color: Colors.purple.shade800,
+                        ),
+
+                        prefixIcon: Icon(Icons.search),
+                        prefixIconColor: Colors.purple.shade800,
+
                       ),
                     ),
                   ),

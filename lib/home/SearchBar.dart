@@ -1,5 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutterproject/home/Userprofilepage/LocationPage.dart';
+import 'package:flutterproject/home/Userprofilepage/businessprofile.dart';
+import 'package:flutterproject/home/Userprofilepage/category/Dashboard.dart';
+import 'package:flutterproject/home/Userprofilepage/category/Help&support.dart';
+import 'package:flutterproject/home/Userprofilepage/category/Messages.dart';
+import 'package:flutterproject/home/Userprofilepage/category/MydigitalCard.dart';
+import 'package:flutterproject/home/Userprofilepage/category/Posterpage.dart';
+import 'package:flutterproject/home/Userprofilepage/category/Selectlanguage.dart';
+import 'package:flutterproject/home/Userprofilepage/wishlist.dart';
 import 'package:flutterproject/home/category/architecture/architecture.dart';
 
 void main() {
@@ -30,7 +38,17 @@ class _SearchPageState extends State<SearchPage> {
     'Builder',
     'Contractors',
     'Registration Services',
-    'Bank Loans (NBFC/PVT)'
+    'Bank Loans (NBFC/PVT)',
+    'Account Setting',
+    'My Digital Card',
+    'Special Day Poster',
+    "Wishlist",
+    'My Message',
+    'Dashboard',
+    'Language',
+    'Subscription Management',
+    'Feedback & Support',
+
   ];
 
   List<String> filteredItems = [];
@@ -132,16 +150,60 @@ class _SearchPageState extends State<SearchPage> {
                               MaterialPageRoute(
                                   builder: (context) => architecture()));
                           break;
-                        case 'Land Promoters':
+                        case 'Language':
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => architecture()));
+                                  builder: (context) => LanguageSection()));
                           break;
-
+                        case 'Wishlist':
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => wishlist()));
+                          break;
+                        case 'Account Setting':
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Accountpage()));
+                          break;
+                        case 'My Message':
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => MessagesPage()));
+                          break;
+                        case 'Dashboard':
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => dashboard()));
+                          break;
+                        case 'Feedback & Support':
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HelpPage()));
+                          break;
+                        case 'My Digital Card':
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => DigitalCardPage()));
+                          break;
+                        case 'Special Day Poster':
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Special_day()));
+                          break;
                         default:
                           ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(content: Text('Coming Soon...')));
+
+
+
                       }
                     },
                   )
@@ -184,9 +246,13 @@ class _SearchPageState extends State<SearchPage> {
                                         builder: (context) => architecture()));
                                 break;
 
-                              default:
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(content: Text('Coming Soon...')));
+
+
+                            default:
+                            ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(content: Text('Coming Soon...')));
+
+
                             }
                           },
                           style: ElevatedButton.styleFrom(

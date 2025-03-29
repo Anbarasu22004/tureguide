@@ -1,0 +1,2 @@
+C:/Users/Smart Global Solutio/StudioProjects/unnnn/android/app/.cxx/RelWithDebInfo/6y203726/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/Smart Global Solutio/StudioProjects/unnnn/android/app/.cxx/RelWithDebInfo/6y203726/arm64-v8a/CMakeFiles/rebuild_cache.dir

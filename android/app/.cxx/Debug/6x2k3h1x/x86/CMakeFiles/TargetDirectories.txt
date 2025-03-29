@@ -1,0 +1,2 @@
+C:/Users/Smart Global Solutio/StudioProjects/flutterproject/android/app/.cxx/Debug/6x2k3h1x/x86/CMakeFiles/edit_cache.dir
+C:/Users/Smart Global Solutio/StudioProjects/flutterproject/android/app/.cxx/Debug/6x2k3h1x/x86/CMakeFiles/rebuild_cache.dir

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterproject/home/Buttomnav.dart';
 import 'package:flutterproject/home/Userprofilepage/Addaccount.dart';
 import 'package:flutterproject/home/Userprofilepage/businessprofile.dart';
 import 'package:flutterproject/home/Userprofilepage/category/Dashboard.dart';
@@ -104,6 +105,7 @@ class _UserProfileState extends State<UserProfile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       backgroundColor: Colors.white,
       body: Container(
         decoration: BoxDecoration(
@@ -151,7 +153,7 @@ class _UserProfileState extends State<UserProfile> {
                       Padding(
                         padding: const EdgeInsets.only(bottom: 150),
                         child: IconButton(onPressed: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Home_screen()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>bot()));
                         }, icon: Icon(Icons.close))
                       ),
                     Padding(
