@@ -39,7 +39,7 @@ class _categoryState extends State<category> {
     return Scaffold(
       appBar:
       AppBar(
-        leading: Icon(Icons.arrow_back,color: Colors.purple,size: 30,),
+        leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back,color: Colors.purple,)),
         title: Text("Categories",style: GoogleFonts.lato(fontSize: 22,fontWeight: FontWeight.w400,color: Colors.purple),),
         actions: [
           Padding(

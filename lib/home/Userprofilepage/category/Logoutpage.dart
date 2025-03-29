@@ -4,6 +4,64 @@ import 'package:google_fonts/google_fonts.dart';
 
 
 
+
+
+
+
+
+class splash extends StatelessWidget {
+  const splash({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: '5 Second Splash Screen',
+      theme: ThemeData(
+        primarySwatch: Colors.green,
+      ),
+      home: const SplashScreen(),
+    );
+  }
+}
+
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({Key? key}) : super(key: key);
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    _navigateToHome();
+  }
+
+  Future<void> _navigateToHome() async {
+    await Future.delayed(const Duration(seconds: 5)); // Splash screen duration
+    if (mounted) {
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (context) => const Login_Screen()),
+      );
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Center(
+        child: Container
+          (height: 50,
+            width: 200,
+            child: Image.asset('assets/logo.png',fit: BoxFit.fill,)),
+      ),
+    );
+  }
+}
+
 class Login_Screen extends StatefulWidget {
   const Login_Screen({super.key});
 
@@ -22,7 +80,7 @@ class _Login_ScreenState extends State<Login_Screen> {
           Center(
             child: Container(height:250,width: 250,
               decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage("assets/Sign in.png"),fit: BoxFit.fill)
+                  image: DecorationImage(image: AssetImage("assets/loginimg.png"),fit: BoxFit.fill)
               ),
             ),
           ),
